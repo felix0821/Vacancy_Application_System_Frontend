@@ -18,11 +18,11 @@ export class UserService {
     return this.httpClient.get<User>(this.userUrl + 'user/'+id);
   }
 
-  public save(id: Number, user: User): Observable<any> {
+  public save(/*id: Number,*/ user: User): Observable<any> {
     return this.httpClient.post<any>(this.userUrl + 'register', user);
   }
 
-  public update(id: Number, user: User): Observable<any> {
+   public update(id: Number, user: User): Observable<any> {
     return this.httpClient.put<any>(this.userUrl + 'update/' + id, user);
   }
 
