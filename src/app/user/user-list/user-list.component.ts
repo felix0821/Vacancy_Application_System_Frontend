@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../service/user.service';
+import { TokenService } from '../../service/token.service';
 
 @Component({
   selector: 'app-user-list',
@@ -9,11 +10,22 @@ import { UserService } from '../../service/user.service';
 })
 export class UserListComponent implements OnInit {
   users: User[] = [];
+  roles!: string[];
+  isAdmin = false;
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    private tokenService: TokenService
+  ) {}
 
   ngOnInit(): void {
     this.loadUsers();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   loadUsers(): void {

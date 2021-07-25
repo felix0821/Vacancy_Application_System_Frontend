@@ -53,10 +53,13 @@ export class LoginComponent implements OnInit {
         this.isLogged = false;
         this.isLoginFail = true;
         this.errMsj = err.error.message;
+        if (this.errMsj == null) {
+          this.errMsj = "Error de conexion"
+        }
         /*this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000, positionClass: 'toast-top-center',
         });*/
-      console.log(err.error.message);
+        console.log(this.errMsj);
       }
     );
   }
