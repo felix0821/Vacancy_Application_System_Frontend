@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'login', component: LoginComponent },
   { path: 'list', component: UserListComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
-  { path: 'profile/:id', component: UserProfileComponent },
+  { path: 'profile', component: UserProfileComponent },
   { path: 'register', component: UserRegisterComponent },
   { path: 'edit/:id', component: UserEditComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }

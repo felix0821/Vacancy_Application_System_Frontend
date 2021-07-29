@@ -3,4 +3,5 @@ export class JwtDto {
   type!: string;
   username!: string;
   authorities!: string[];
+  key!: string;
 }

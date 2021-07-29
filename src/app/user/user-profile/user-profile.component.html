@@ -1,23 +1,24 @@
+<app-menu></app-menu>
 <div class="container">
   <div class="row mt-5"  >
     <div class="col-md-4 mx-auto">
         <div class="card" style="width: 18rem;">
             <div class="card-header text-center">
-              Detalle por ID
+              Mi perfil
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><b>DNI: </b>{{user.dni}}</li>
-              <li class="list-group-item"><b>NOMBRE DE USUARIO: </b>user.username}}</li>
-              <!--
+              <li class="list-group-item"><b>NOMBRE DE USUARIO: </b>{{user.username}}</li>
+              
               <li class="list-group-item"><b>NAME: </b>{{user.name}}</li>
 
               <li class="list-group-item"><b>APELLIDO: </b>{{user.lastname}}</li>
-				      -->
+				      
               <li class="list-group-item"><b>CORREO: </b>{{user.email}}</li>
               <li class="list-group-item"><b>FECHA DE NACIMIENTO: </b>{{user.dateBirth}}</li>
             </ul>
             <div class="card-footer">
-                <button class="btn btn-outline-primary btn-block" ><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              <a href="/" class="btn btn-outline-primary btn-block"><i class="fas fa-arrow-alt-circle-left"></i> Volver</a>
             </div>
           </div>
           

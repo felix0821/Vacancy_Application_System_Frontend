@@ -35,7 +35,7 @@ export class UserEditComponent implements OnInit {
         this.router.navigate(['/lista']);
       },
       err => {
-        
+        window.sessionStorage.clear();
          this.router.navigate(['/']);
       }
     );

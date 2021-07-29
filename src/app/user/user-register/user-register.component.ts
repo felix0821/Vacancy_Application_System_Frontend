@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../../models/user';
+import { UserRegister } from '../../models/user-register';
 import { UserService } from '../../service/user.service';
 import { TokenService } from '../../service/token.service';
 
@@ -12,7 +12,7 @@ import { TokenService } from '../../service/token.service';
 export class UserRegisterComponent implements OnInit {
   isRegister = false;
   isRegisterFail = false;
-  userRegister?: User;
+  userRegister?: UserRegister;
   username!: string;
   password!: string;
   dni!:string;
@@ -21,7 +21,7 @@ export class UserRegisterComponent implements OnInit {
   errMsj?: string;
   isLogged = false;
   constructor(private tokenService: TokenService,
-    private authService: UserService,
+    private userService: UserService,
     private router: Router) { 
   }
 
@@ -31,8 +31,8 @@ export class UserRegisterComponent implements OnInit {
       }
   }
 onRegister(): void {
-    this.userRegister= new User(this.dni, this.username, this.password, this.email, this.dateBirth);
-    this.authService.save(this.userRegister).subscribe(
+  this.userRegister = new UserRegister(this.dni, this.username, this.password,this.email, this.dateBirth);
+  this.userService.register(this.userRegister).subscribe(
       data => {
         this.isRegister=true;
         this.isRegisterFail=false;   

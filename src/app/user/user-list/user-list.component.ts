@@ -34,6 +34,7 @@ export class UserListComponent implements OnInit {
         this.users = data;
       },
       err => {
+        window.sessionStorage.clear();
         console.log(err);
       }
     )
