@@ -15,6 +15,9 @@ import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { FacultyComponent } from './faculty/faculty.component';
+import { CompetitionWorkplaceListComponent } from './competition-workplace/competition-workplace-list/competition-workplace-list.component';
+import { CompetitionWorkplaceViewComponent } from './competition-workplace/competition-workplace-view/competition-workplace-view.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
     MenuComponent,
     IndexComponent,
     UserRegisterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    FacultyComponent,
+    CompetitionWorkplaceListComponent,
+    CompetitionWorkplaceViewComponent
   ],
   imports: [
     BrowserModule,

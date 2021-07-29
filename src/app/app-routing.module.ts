@@ -7,6 +7,8 @@ import { UserGuardService as guard } from './guard/user-guard.service';
 import { LoginComponent } from './authentication/login/login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { FacultyComponent } from './faculty/faculty.component';
+import { CompetitionWorkplaceListComponent } from './competition-workplace/competition-workplace-list/competition-workplace-list.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'profile', component: UserProfileComponent },
   { path: 'register', component: UserRegisterComponent },
   { path: 'edit/:id', component: UserEditComponent },
+  { path: 'faculties/facultySchools', component: FacultyComponent },
+  { path: 'competitionWorkplace/facultySchool/:id', component: CompetitionWorkplaceListComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
