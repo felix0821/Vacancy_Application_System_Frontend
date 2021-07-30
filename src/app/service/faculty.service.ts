@@ -8,10 +8,14 @@ import { Faculty} from '../models/faculty';
 })
 export class FacultyService {
 
-  facultyUrl = "http://localhost:1026/v2/entities/";
+  facultyUrl = "http://localhost:8080/faculty-school/";
   constructor(private httpClient: HttpClient) { }
 
+  //public list(): Observable<Faculty[]> {
+  //  return this.httpClient.get<Faculty[]>(this.facultyUrl + 'list');
+  //}
+
   public list(): Observable<Faculty[]> {
-    return this.httpClient.get<Faculty[]>(this.facultyUrl);
+    return this.httpClient.get<Faculty[]>(this.facultyUrl + 'list');
   }
 }

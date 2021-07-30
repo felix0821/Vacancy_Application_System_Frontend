@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
-import { CompetitionWorkplace } from '../../models/competition-workplace';
+import { FacultySchoolWorkplace, CompetitionWorkplace } from '../../models/faculty-school-workplace';
 import { CompetitionWorkplaceService } from '../../service/competition-workplace.service';
 
 @Component({
@@ -11,23 +11,23 @@ import { CompetitionWorkplaceService } from '../../service/competition-workplace
 export class CompetitionWorkplaceListComponent implements OnInit {
 
  // competitionWorkplaces: CompetitionWorkplace[] = [];
-  public competitionWorkplaces:Array<any>=[]
+  public facultySchoolWorkplace!: FacultySchoolWorkplace;
   constructor(private activatedRoute: ActivatedRoute,
     private competitionWorkplaceService: CompetitionWorkplaceService,
     private router: Router) { }
 
   ngOnInit(): void {
-    /*const id = this.activatedRoute.snapshot.params.id;
+    const id = this.activatedRoute.snapshot.params.id;
     this.competitionWorkplaceService.listByFacultySchool(id).subscribe(
       data => {
-        this.competitionWorkplaces = data;
+        this.facultySchoolWorkplace = new FacultySchoolWorkplace(data.name, data.workplaces);
       },
       err => {
         console.log("Error de vista por id");
       }
-    );*/
+    );
 
- this.competitionWorkplaces=[
+ /*this.competitionWorkplaces=[
     {name:"Programador en Java",
     idFacultySchool:11},
     {name:"Uso de algoritmos",
@@ -38,7 +38,7 @@ export class CompetitionWorkplaceListComponent implements OnInit {
     idFacultySchool:13},
     {name:"Manejo de calculdora",
     idFacultySchool:13},
-     ]
+     ]*/
   }
 
 }

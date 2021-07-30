@@ -8,6 +8,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/facultiesSchools"><i class="fa fa-home" aria-hidden="true"></i> Escuelas</a>
+      </li>
       <li class="nav-item" *ngIf="isLogged">
         <a class="nav-link" routerLink="/list"><i class="fa fa-cubes" aria-hidden="true"></i> Lista</a>
       </li>
@@ -17,7 +20,7 @@
       <!-- Dropdown -->
       <li class="nav-item dropdown" *ngIf="isLogged">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Dropdown link
+          Perfil usuario
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="/profile">Mi perfil</a>

@@ -12,7 +12,6 @@ import { TokenService } from '../../service/token.service';
 export class UserProfileComponent implements OnInit {
   user!: User;
   isLogged = false;
-  username = '';
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
@@ -24,20 +23,32 @@ export class UserProfileComponent implements OnInit {
     //const id = this.activatedRoute.snapshot.params.id;
     if (this.tokenService.getToken()) {
       this.isLogged = true;
-      this.username = String(this.tokenService.getUserName());
-      this.userService.profile(this.username).subscribe(
+      //Esto se muestra a todos
+      this.userService.profile().subscribe(
         data => {
           this.user = data;
         },
         err => {
           console.log("Error de vista por id");
+          this.isLogged = false;
           window.sessionStorage.clear();
           this.volver();
         }
       );
+
+      
+      /*if (rol === 'EVALUATOR') {
+      //Se muestra a solo evaluadores (this.userService.evaluationSheet) user/evaluations
+        this.isAdmin = true;
+      }*/
+
+      /*if (rol === 'POSTULANT') {
+      //Se muestra a solo postulante (this.userService.competitionWorkplace) user/workplaces
+        this.isAdmin = true;
+      }*/
+
     } else {
       this.isLogged = false;
-      this.username = '';
     }
 
   }

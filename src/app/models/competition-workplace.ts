@@ -1,11 +1,8 @@
 export class CompetitionWorkplace {
+  id?: Number;
   name?: String;
-  OpeningDate?:Date;
+  openingDate?:Date;
   deadline?:Date;
-  description?:String;
-  requirements?:String;
   evaluationDate?:Date;
-  state?:Boolean;
-  urlImage?: String;
-  idFacultySchool?:Number;
+  nameFacultySchool?:String;
 }

@@ -30,23 +30,23 @@ export class UserRegisterComponent implements OnInit {
       this.isLogged = true;
       }
   }
-onRegister(): void {
-  this.userRegister = new UserRegister(this.dni, this.username, this.password,this.email, this.dateBirth);
-  this.userService.register(this.userRegister).subscribe(
-      data => {
-        this.isRegister=true;
-        this.isRegisterFail=false;   
-        this.router.navigate(['/login']);
-      },
-      err => {
-        this.isRegister = false;
-        this.isRegisterFail = true;
-        this.errMsj = err.error.message;
-        if (this.errMsj == null) {
-          this.errMsj = "Error de registro"
+  onRegister(): void {
+    this.userRegister = new UserRegister(this.dni, this.username, this.password,this.email, this.dateBirth);
+    this.userService.register(this.userRegister).subscribe(
+        data => {
+          this.isRegister=true;
+          this.isRegisterFail=false;   
+          this.router.navigate(['/login']);
+        },
+        err => {
+          this.isRegister = false;
+          this.isRegisterFail = true;
+          this.errMsj = err.error.message;
+          if (this.errMsj == null) {
+            this.errMsj = "Error de registro"
+          }
         }
-      }
-    );
+      );
+    }
   }
-}
 

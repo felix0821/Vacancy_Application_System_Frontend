@@ -1,12 +1,12 @@
+import { FacultySchool } from '../models/faculty-school';
 export class Faculty {
-  id?: Number;
   name: String;
-  urlImage?: String;
-  site?:Number;
-  facultySchools?:any[];
-  constructor(name: String, urlImage: String) {
+  siteId: String;
+  facultySchools: FacultySchool[];
+  constructor(name: String, siteId: String, facultySchools: FacultySchool[]) {
     this.name = name;
-    this.urlImage = urlImage;
+    this.siteId = siteId;
+    this.facultySchools = facultySchools;
   }
 
 }

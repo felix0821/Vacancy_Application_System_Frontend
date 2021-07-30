@@ -13,27 +13,27 @@
       <h3>AREA DE INGENIERIAS</h3>
       <div *ngFor="let faculty of site1">
         <h4>{{faculty.name}}</h4>
-          <ul>
-            <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
-          </ul>
+        <ul>
+          <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
+        </ul>
       </div>
     </div>
     <div class="col-sm">
       <h3>AREA DE BIOMEDICAS</h3>
       <div *ngFor="let faculty of site2">
         <h4>{{faculty.name}}</h4>
-          <ul>
-            <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
-          </ul>
+        <ul>
+          <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
+        </ul>
       </div>
     </div>
     <div class="col-sm">
       <h3>AREA DE SOCIALES</h3>
-      <div *ngFor="let faculty of site2">
+      <div *ngFor="let faculty of site3">
         <h4>{{faculty.name}}</h4>
-          <ul>
-            <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
-          </ul>
+        <ul>
+          <li *ngFor="let facultySchools of faculty.facultySchools"><a routerLink="/competitionWorkplace/facultySchool/{{facultySchools.id}}">{{facultySchools.name}}</a></li>
+        </ul>
       </div>
     </div>
   </div>

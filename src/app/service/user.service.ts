@@ -15,8 +15,8 @@ export class UserService {
     return this.httpClient.get<User[]>(this.userUrl + 'list');
   }
 
-  public profile(username: String): Observable<User> {
-    return this.httpClient.get<User>(this.userUrl + 'profile/');
+  public profile(): Observable<User> {
+    return this.httpClient.get<User>(this.userUrl + 'profile');
   }
 
   public register(user: UserRegister): Observable<any> {

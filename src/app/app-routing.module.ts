@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'profile', component: UserProfileComponent },
   { path: 'register', component: UserRegisterComponent },
   { path: 'edit/:id', component: UserEditComponent },
-  { path: 'faculties/facultySchools', component: FacultyComponent },
+  { path: 'facultiesSchools', component: FacultyComponent },
   { path: 'competitionWorkplace/facultySchool/:id', component: CompetitionWorkplaceListComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
